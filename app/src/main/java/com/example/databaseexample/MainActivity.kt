@@ -1,13 +1,16 @@
 package com.example.databaseexample
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.databaseexample.databinding.ActivityMainBinding
-import database.MyMoviesDatabase
-import database.entity.Movie
+import com.example.databaseexample.database.MyMoviesDatabase
+import com.example.databaseexample.database.entity.Movie
+import com.example.databaseexample.database.view.MovieListActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,9 +28,9 @@ class MainActivity : AppCompatActivity() {
 
         binding.viewModel = viewModel
 
-        viewModel.allMovies.observe(this, { movies: List<Movie> ->
-            binding.allMoviesTextView.text = movies.toString()
-        })
-
+        floatingActionButton.setOnClickListener {
+            viewModel.addMovie()
+            startActivity(Intent(this, MovieListActivity::class.java))
+        }
     }
 }

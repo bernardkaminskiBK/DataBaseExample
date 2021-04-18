@@ -3,8 +3,8 @@ package com.example.databaseexample
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import database.dao.MovieDAO
-import database.entity.Movie
+import com.example.databaseexample.database.dao.MovieDAO
+import com.example.databaseexample.database.entity.Movie
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 

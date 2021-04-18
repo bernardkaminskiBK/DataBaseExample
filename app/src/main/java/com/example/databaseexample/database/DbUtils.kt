@@ -1,7 +1,7 @@
-package database
+package com.example.databaseexample.database
 
-import database.dao.MovieDAO
-import database.entity.Movie
+import com.example.databaseexample.database.dao.MovieDAO
+import com.example.databaseexample.database.entity.Movie
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

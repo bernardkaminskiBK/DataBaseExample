@@ -2,7 +2,7 @@ package com.example.databaseexample
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import database.dao.MovieDAO
+import com.example.databaseexample.database.dao.MovieDAO
 
 class MainViewModelFactory(private val dataSource: MovieDAO): ViewModelProvider.Factory {
 

@@ -73,22 +73,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
             android:clickable="true"
-            android:onClick="@{() -> viewModel.addMovie()}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/yearTextNumber"
             app:srcCompat="@android:drawable/ic_input_add" />
 
-        <TextView
-            android:id="@+id/allMoviesTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/floatingActionButton"
-            app:layout_constraintVertical_bias="0.13" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

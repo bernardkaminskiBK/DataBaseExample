@@ -1,12 +1,12 @@
-package database
+package com.example.databaseexample.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
-import database.dao.MovieDAO
-import database.entity.Movie
+import com.example.databaseexample.database.dao.MovieDAO
+import com.example.databaseexample.database.entity.Movie
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

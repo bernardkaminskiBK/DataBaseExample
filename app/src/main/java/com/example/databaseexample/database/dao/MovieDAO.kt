@@ -1,9 +1,9 @@
-package database.dao
+package com.example.databaseexample.database.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import database.entity.MovieShort
-import database.entity.Movie
+import com.example.databaseexample.database.entity.MovieShort
+import com.example.databaseexample.database.entity.Movie
 
 @Dao
 interface MovieDAO {
@@ -34,6 +34,9 @@ interface MovieDAO {
 
     @Query("SELECT * FROM MOVIES")
     fun getAllMovies(): LiveData<List<Movie>>
+
+    @Query("SELECT * FROM MOVIES")
+    fun getAllMoviesList(): List<Movie>
 
     @Query("SELECT movie_name, year FROM movies")
     suspend fun getAllMoviesByNameAndYear(): List<MovieShort>
